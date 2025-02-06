@@ -209,6 +209,68 @@
         header, section, footer {
             animation: fadeIn 1s ease-out;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .job {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+            .project-box {
+                width: 100%;
+            }
+
+            #cv a.cta {
+                width: 100%;
+                text-align: center;
+            }
+
+            .social-icons a img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 1rem;
+            }
+
+            header .logo h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .project-box h3 a {
+                font-size: 1.1rem;
+            }
+
+            .project-box p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -266,39 +328,59 @@
         <p><strong>Tools:</strong> Git, Linux, VS Code</p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="notable-projects">
-        <h2>Notable Projects</h2>
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-box" style="background-color: #1e3d58;">
-                <h3><a href="https://github.com/MananSharma001/Currency-Tracker-Application" target="_blank">💰 Money Transfer Application</a></h3>
-                <p>Java + PHP Backend with secure transactions</p>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="project-box" style="background-color: #2a2f3d;">
-                <h3><a href="https://github.com/MananSharma001/Placement-Portal" target="_blank">📈 Placement Portal</a></h3>
-                <p>A platform for students to discover placement opportunities.</p>
-            </div>
+<!-- Projects Section -->
+<section id="notable-projects">
+    <h2>Notable Projects</h2>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-box" style="background-color: #1e3d58;">
+            <h3><a href="https://github.com/MananSharma001/Currency-Tracker-Application" target="_blank">💰 Money Transfer Application</a></h3>
+            <p>Java + PHP Backend with secure transactions</p>
         </div>
-    </section>
+
+        <!-- Project 2 -->
+        <div class="project-box" style="background-color: #2a4d7c;">
+            <h3><a href="https://github.com/MananSharma001/blockchain-voting-system" target="_blank">🔗 Blockchain-Based Voting System</a></h3>
+            <p>Ethereum Smart Contracts for transparent elections</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-box" style="background-color: #4b6c9a;">
+            <h3><a href="https://github.com/MananSharma001/Code_Venture" target="_blank">🎓 College Placement Website</a></h3>
+            <p>A full-stack recruitment platform</p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-box" style="background-color: #3a5978;">
+            <h3><a href="https://github.com/MananSharma001/Banking-Application-with-Procedural-Programming" target="_blank">🏦 Bank Management System</a></h3>
+            <p>C++-based banking software</p>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-box" style="background-color: #36588f;">
+            <h3><a href="https://github.com/MananSharma001/Parking_Availability" target="_blank">🅿 Parking Availability</a></h3>
+            <p>Parking availability system with Flask backend and React frontend</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- CV Section -->
     <section id="cv">
         <h2>Download My CV</h2>
-        <a href="path/to/cv.pdf" class="cta">Download CV</a>
+        <a href="https://drive.google.com/file/d/17Z7b3IWQtNwrWZE1lPnY7fZ0P283MERd/view?usp=drive_link" class="cta">Download CV</a>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/manansh" target="_blank"><img width="120" height="120" src="https://img.icons8.com/color/480/linkedin.png" alt="linkedin"/></a>
-            <a href="https://github.com/MananSharma001" target="_blank"><img width="120" height="120" src="https://img.icons8.com/ios/50/FFFFFF/github--v1.png" alt="github--v1"/>
-            <a href="mailto:manan@example.com"><img width="120" height="120" src="https://img.icons8.com/color/480/gmail-new.png" alt="gmail-new"/></a>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="social-icons">
+        <a href="https://linkedin.com/in/manansh" target="_blank"><img width="120" height="120" src="https://img.icons8.com/color/480/linkedin.png" alt="linkedin"/></a>
+        <a href="https://github.com/MananSharma001" target="_blank"><img width="120" height="120" src="https://img.icons8.com/ios/50/FFFFFF/github--v1.png" alt="github--v1"/></a>
+        <a href="mailto:manan@example.com"><img width="120" height="120" src="https://img.icons8.com/color/480/gmail-new.png" alt="gmail-new"/></a>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
