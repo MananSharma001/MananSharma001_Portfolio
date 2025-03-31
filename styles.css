@@ -13,13 +13,32 @@ body {
     font-size: 1.1rem;
 }
 
+/* Headings and Text */
 h1, h2, h3, p {
     margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #FFD700; /* Gold */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #CCCCCC; /* Light Gray for readability */
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00BFFF; /* Light Blue */
 }
 
 ul {
@@ -33,13 +52,13 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #1E90FF; /* Blue Header */
-    color: #FFFFFF; /* White Text */
+    color: #FFFFFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 header .logo h1 {
     font-size: 2.5rem;
-    color: #FFFFFF; /* White Text */
+    color: #FFFFFF;
 }
 
 nav ul {
@@ -51,39 +70,29 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFFFFF; /* White Text */
+    color: #FFFFFF;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00BFFF; /* Lighter Blue on Hover */
+    color: #FFD700; /* Gold */
 }
 
-/* Section Styles */
+/* Sections */
 section {
     padding: 60px 20px;
     margin: 30px auto;
     max-width: 1200px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 2.5rem;
-    color: #1E90FF; /* Blue */
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #FFFFFF; /* White Text */
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    background-color: #111111; /* Slightly Lighter Black */
 }
 
 /* About Section */
 #about p {
     font-size: 1.2rem;
+    text-align: justify;
 }
 
 /* Experience Section */
@@ -93,25 +102,23 @@ section p {
 }
 
 .job {
-    background-color: #222222; /* Dark Gray */
-    color: #FFFFFF; /* White Text */
+    background-color: #222222;
+    color: #FFFFFF;
     border-radius: 8px;
     padding: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
     width: 45%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-5px);
 }
 
 .job h3 {
     font-size: 1.5rem;
-    color: #1E90FF; /* Blue */
-}
-
-/* Tech Stack Section */
-#tech-stack p {
-    font-size: 1.1rem;
-    color: #FFFFFF; /* White Text */
+    color: #FFD700;
 }
 
 /* Projects Section */
@@ -123,19 +130,20 @@ section p {
 
 .project-box {
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background-color: #333333; /* Darker Gray */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #222222;
 }
 
 .project-box:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
 .project-box h3 a {
-    color: #1E90FF; /* Blue */
+    color: #1E90FF;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -145,26 +153,38 @@ section p {
 }
 
 /* CV Section */
+#cv {
+    text-align: center;
+}
+
 #cv a.cta {
     display: inline-block;
-    background-color: #1E90FF; /* Blue */
-    color: #000000; /* Black Text for CTA */
-    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: #000000;
+    padding: 12px 25px;
     border-radius: 5px;
     font-size: 1.2rem;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #cv a.cta:hover {
-    background-color: #00BFFF; /* Lighter Blue */
-    color: #FFFFFF;
+    background-color: #FFD700;
+    color: #000000;
+    transform: scale(1.05);
 }
 
 /* Contact Section */
+#contact {
+    text-align: center;
+    background-color: #1e1e2f;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
 #contact .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     margin-top: 20px;
 }
@@ -172,20 +192,23 @@ section p {
 #contact .social-icons a img {
     width: 60px;
     height: 60px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
 #contact .social-icons a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
 }
 
 /* Footer */
 footer {
-    background-color: #1E90FF; /* Blue Footer */
-    color: #FFFFFF; /* White Text */
+    background-color: #1E90FF;
+    color: #FFFFFF;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 1rem;
 }
 
 /* Animations */
